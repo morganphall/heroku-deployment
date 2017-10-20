@@ -8,6 +8,6 @@ const app = express();
 app.use(express.static(clientPath));
 
 console.log(process.env.GREETING) //this is in the variables file
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log('Listening on port 3000');
 });
